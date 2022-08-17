@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/umbrella?currentSchema=currency
+    username: postgres
+    password: docker
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: currency
+    hibernate:
+      ddl-auto: none
+    open-in-view:
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
+    default-schema: currency
+    liquibase-schema: currency
+    enabled: true
+
+security:
+  auth:
+    whitelist: >
+      /swagger-resources,
+      /swagger-resources/**,
+      /configuration/ui,
+      /configuration/security,
+      /swagger-ui.html,
+      /webjars/**,
+      /api/public/**,
+      /v3/api-docs/**,
+      /v3/api-docs,
+      /swagger-ui/**
+  username: jHEerd753n2v
+  password: ulLwH6pma14l
+  access-token: K3XAZ71p4wln7dak224G5OaM
