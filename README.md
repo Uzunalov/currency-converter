@@ -37,3 +37,21 @@ accessToken: K3XAZ71p4wln7dak224G5OaM
 username: jHEerd753n2v
 password: ulLwH6pma14l
 ```
+
+* Example Requests:
+```sh
+curl -X 'GET' \
+  'http://localhost:8080/v1/api/currency?currencyCode=USD&page=0&size=20' \
+  -H 'accept: */*' \
+  -H 'Authorization: Basic akhFZXJkNzUzbjJ2OnVsTHdINnBtYTE0bA=='
+```
+```sh
+curl -X 'POST' \
+  'http://localhost:8080/v1/api/currency' \
+  -H 'accept: */*' \
+  -H 'Authorization: K3XAZ71p4wln7dak224G5OaM' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "calculationDate": "2022-08-09"
+}'
+```
