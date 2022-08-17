@@ -16,7 +16,7 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI customOpenAPI() {
         final String securitySchemeName = "basicAuth";
-        final String bearerSchemeName = "apiKeyAuth";
+        final String authorizationSchemeName = "accessTokenAuth";
         return new OpenAPI()
                 .components(
                         new Components()
@@ -24,12 +24,12 @@ public class SwaggerConfig {
                                         new SecurityScheme()
                                                 .type(SecurityScheme.Type.HTTP)
                                                 .scheme("basic"))
-                                .addSecuritySchemes(bearerSchemeName,
+                                .addSecuritySchemes(authorizationSchemeName,
                                         new SecurityScheme()
                                                 .type(SecurityScheme.Type.APIKEY).name("Authorization")
                                                 .in(SecurityScheme.In.HEADER))
                 )
-                .security(List.of(new SecurityRequirement().addList(securitySchemeName).addList(bearerSchemeName)))
+                .security(List.of(new SecurityRequirement().addList(securitySchemeName).addList(authorizationSchemeName)))
                 .info(new Info().title("Currency Converter").version("v1"));
     }
 }

@@ -23,6 +23,17 @@ $ gradle bootRun
 ```
 
 ## How To Use?
-* Now you can go to [Swagger Url](http://localhost:8080/swagger-ui/index.html#/)
+* Now you can go to [Swagger Url](http://localhost:8080/swagger-ui/index.html#/).
 
-[![Product Name Screen Shot][product-screenshot]](https://drive.google.com/file/d/191XFeaZfcjXVcw5JBF2Xbtor7w8Vabbf/view)
+![Product Name Screen Shot](./src/main/resources/images/swagger-screen.png)
+
+* Use "Authorize" button for authentication of requests. If you want to use POST or DELETE requests, you must authorize as admin:
+```sh
+accessToken: K3XAZ71p4wln7dak224G5OaM
+```
+
+* If you want to use GET request, you must authorize as user (Basic Authentication):
+```sh
+username: jHEerd753n2v
+password: ulLwH6pma14l
+```
