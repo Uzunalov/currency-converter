@@ -30,6 +30,6 @@ public class SwaggerConfig {
                                                 .in(SecurityScheme.In.HEADER))
                 )
                 .security(List.of(new SecurityRequirement().addList(securitySchemeName).addList(bearerSchemeName)))
-                .info(new Info().title("Currency").version("v1"));
+                .info(new Info().title("Currency Converter").version("v1"));
     }
 }
