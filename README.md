@@ -17,7 +17,12 @@ $ cd .\docker\
 $ docker-compose up
 ```
 
-* The second step is building the application:
+* In the second step you must create a "currency" schema because the default schema of liquibase is the currency:
+```sh
+create schema currency;
+```
+
+* The third step is building the application:
 ```sh
 $ gradle bootRun
 ```
